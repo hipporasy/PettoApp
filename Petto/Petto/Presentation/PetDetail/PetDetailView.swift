@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import pettoCore
 struct PetDetailView: View {
     
     @State var isFavorite: Bool = false
@@ -51,7 +51,7 @@ struct PetDetailView: View {
                 HStack(spacing: 20) {
                     BoxDetailView(title: "Age", description: "\(pet.age) Months")
                     BoxDetailView(title: "Weight", description: "\(pet.weight) kg")
-                    BoxDetailView(title: "Sex", description: pet.gender.rawValue.capitalized)
+                    BoxDetailView(title: "Sex", description: pet.gender.name.capitalized)
                 }
                 .padding(.top, 10)
                 
@@ -60,7 +60,7 @@ struct PetDetailView: View {
                         Text(pet.name)
                             .font(.system(size: 18, weight: .medium))
                         Spacer()
-                        Text(pet.breed.description)
+                        Text(pet.breed.description_)
                             .font(.system(size: 18, weight: .regular))
                     }
                     .padding(.top)
@@ -145,7 +145,7 @@ struct PetDetailPreview: PreviewProvider {
     
     static var previews: some View {
         NavigationView {
-            PetDetailView(pet: Pet.dogs.first!)
+            PetDetailView(pet: Pet.Companion().dogs.first!)
         }
     }
     

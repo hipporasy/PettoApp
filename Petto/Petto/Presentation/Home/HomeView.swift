@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 import Introspect
-
+import pettoCore
 struct HomeView: View {
     
     @State private var _tabBarController: UITabBarController? = nil
@@ -95,9 +95,10 @@ extension Pet.PetType {
     var pets: [Pet] {
         switch self {
         case .dogs:
-            return Pet.dogs
+            return Pet.Companion().dogs
         case .cats:
-            return Pet.cats
+            return Pet.Companion().cats
+        default: return []
         }
     }
     
@@ -171,7 +172,7 @@ struct PetView: View {
                         .background(pet.isAdult ? Color.secondaryYellow : Color.primaryLight)
                         .cornerRadius(10)
                     Spacer()
-                    Image(pet.gender.rawValue)
+                    Image(pet.gender.name)
                         .foregroundColor(pet.isAdult ? Color.primaryYellow : Color.primaryColor)
                 }
                 .padding(.leading)
@@ -180,7 +181,7 @@ struct PetView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(pet.name)
                         .font(.system(size: 18, weight: .medium))
-                    Text(pet.breed.description)
+                    Text(pet.breed.description_)
                         .font(.system(size: 14, weight: .regular))
                 }
                 .foregroundColor(.darkText)

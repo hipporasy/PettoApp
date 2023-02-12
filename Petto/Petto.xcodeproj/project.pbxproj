@@ -24,6 +24,7 @@
 		556D1BA72998800A0014D6AB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1B9E2998800A0014D6AB /* ProfileView.swift */; };
 		556D1BA82998800A0014D6AB /* PetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1BA02998800A0014D6AB /* PetDetailView.swift */; };
 		556D1BAB299880840014D6AB /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1BAA2998806E0014D6AB /* GifImageView.swift */; };
+		556D1BAD299886B50014D6AB /* Extension+Parcelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1BAC299886B50014D6AB /* Extension+Parcelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 		556D1B9E2998800A0014D6AB /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		556D1BA02998800A0014D6AB /* PetDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailView.swift; sourceTree = "<group>"; };
 		556D1BAA2998806E0014D6AB /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
+		556D1BAC299886B50014D6AB /* Extension+Parcelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Parcelable.swift"; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* Petto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 			children = (
 				556D1B6829987F820014D6AB /* Color+Extension.swift */,
 				556D1B6729987F820014D6AB /* Image+Gif+Extension.swift */,
+				556D1BAC299886B50014D6AB /* Extension+Parcelable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				556D1BA12998800A0014D6AB /* CentreView.swift in Sources */,
 				556D1BA82998800A0014D6AB /* PetDetailView.swift in Sources */,
 				556D1B6E29987FBF0014D6AB /* Pet.swift in Sources */,
+				556D1BAD299886B50014D6AB /* Extension+Parcelable.swift in Sources */,
 				556D1BA42998800A0014D6AB /* HomeView.swift in Sources */,
 				556D1BA52998800A0014D6AB /* SplashScreenView.swift in Sources */,
 				556D1B6929987F910014D6AB /* Image+Gif+Extension.swift in Sources */,

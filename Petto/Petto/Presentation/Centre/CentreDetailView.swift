@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import pettoCore
 
 struct CentreDetailView: View {
     @Environment(\.presentationMode) var presentedMode: Binding<PresentationMode>
@@ -84,7 +85,7 @@ struct PetRow: View {
             VStack(alignment: .leading) {
                 Text(pet.name)
                     .font(.system(size: 18, weight: .medium))
-                Text(pet.breed.description)
+                Text(pet.breed.description_)
                     .font(.system(size: 18, weight: .regular))
                 HStack {
                     Text(pet.displayType)
@@ -94,7 +95,7 @@ struct PetRow: View {
                         .background(pet.isAdult ? Color.secondaryYellow : Color.primaryLight)
                         .cornerRadius(10)
                     Spacer()
-                    Image(pet.gender.rawValue)
+                    Image(pet.gender.name)
                         .foregroundColor(pet.isAdult ? Color.primaryYellow : Color.primaryColor)
                 }
             }
