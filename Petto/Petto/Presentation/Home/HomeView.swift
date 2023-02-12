@@ -107,24 +107,22 @@ extension Pet.PetType {
 struct PetTypeView: View {
     
     @Binding var selectedPetType: Pet.PetType
-    
     var body: some View {
     
         HStack {
-    
             ForEach(Pet.PetType.allCases) { petType in
                 Button(action: {
                     selectedPetType = petType
                 }) {
                     VStack {
-                        Image(petType.rawValue)
+                        Image(petType.name.lowercased())
                             .foregroundColor(selectedPetType == petType ? .secondaryDark : .darkText)
                             .frame(width: 64, height: 64)
                             .frame(maxWidth: .infinity)
                             .background(selectedPetType == petType ? Color.secondaryColor : .clear)
                             .cornerRadius(15)
                             .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.lightGrey, lineWidth: 1))
-                        Text(petType.id)
+                        Text(petType.name.capitalized)
                             .font(.system(size: 16, weight: .regular))
                             .foregroundColor(.darkText)
                     }
@@ -181,7 +179,7 @@ struct PetView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(pet.name)
                         .font(.system(size: 18, weight: .medium))
-                    Text(pet.breed.description_)
+                    Text(pet.breed.detail)
                         .font(.system(size: 14, weight: .regular))
                 }
                 .foregroundColor(.darkText)

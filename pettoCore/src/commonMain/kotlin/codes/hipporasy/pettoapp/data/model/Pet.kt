@@ -4,7 +4,7 @@ import codes.hipporasy.pettoapp.common.Parcelable
 import codes.hipporasy.pettoapp.common.Parcelize
 
 interface Breed : Parcelable {
-    val description: String
+    val detail: String
 }
 
 @Parcelize
@@ -176,7 +176,7 @@ enum class CatBreed(private val value: String) : Breed {
     SCOTTISH_FOLD("Scottish Fold"),
     PERSIAN_CAT("Persian Cat");
 
-    override val description: String
+    override val detail: String
         get() {
             return value
         }
@@ -193,7 +193,7 @@ enum class DogBreed(private val value: String) : Breed {
     MALAMUTE("Malamute");
 
 
-    override val description: String
+    override val detail: String
         get() {
             return value
         }

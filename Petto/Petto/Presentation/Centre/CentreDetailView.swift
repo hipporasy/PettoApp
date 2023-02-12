@@ -85,7 +85,7 @@ struct PetRow: View {
             VStack(alignment: .leading) {
                 Text(pet.name)
                     .font(.system(size: 18, weight: .medium))
-                Text(pet.breed.description_)
+                Text(pet.breed.detail)
                     .font(.system(size: 18, weight: .regular))
                 HStack {
                     Text(pet.displayType)

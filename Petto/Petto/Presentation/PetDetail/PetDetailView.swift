@@ -60,7 +60,7 @@ struct PetDetailView: View {
                         Text(pet.name)
                             .font(.system(size: 18, weight: .medium))
                         Spacer()
-                        Text(pet.breed.description_)
+                        Text(pet.breed.detail)
                             .font(.system(size: 18, weight: .regular))
                     }
                     .padding(.top)
