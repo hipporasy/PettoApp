@@ -9,11 +9,12 @@ import SwiftUI
 import UIKit
 import Introspect
 import pettoCore
+@available(iOS 15.0, *)
 struct HomeView: View {
     
     @State private var _tabBarController: UITabBarController? = nil
     
-    @State private var _selectedPetType: Pet.PetType = .dogs
+    @ObservedObject private var viewModel = ViewModel()
     
     var profileView: some View {
         Image("profile")
@@ -46,11 +47,11 @@ struct HomeView: View {
             .frame(height: 40)
             .background(RoundedRectangle(cornerRadius: 10).stroke(Color.lightGrey, lineWidth: 1))
             .padding()
-            PetTypeView(selectedPetType: $_selectedPetType)
+            PetTypeView(selectedPetType: $viewModel.selectedPetType)
             
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                    ForEach(_selectedPetType.pets) { pet in
+                    ForEach(viewModel.pets) { pet in
                         PetView(pet: pet)
                     }
                 }
@@ -66,6 +67,13 @@ struct HomeView: View {
         })
         .introspectTabBarController { (UITabBarController) in
             self._tabBarController = UITabBarController
+        }
+        
+        .onChange(of: viewModel.selectedPetType, perform: { newValue in
+            viewModel.loadPet()
+        })
+        .onAppear {
+            viewModel.loadPet()
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarLeading) {

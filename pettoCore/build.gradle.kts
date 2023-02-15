@@ -50,7 +50,14 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation(kotlin("stdlib-jdk8"))
+                implementation("io.ktor:ktor-client-okhttp:${Versions.ktor}")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.serialization}")
+                implementation("io.insert-koin:koin-android:${Versions.koin}")
+            }
+        }
         val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting

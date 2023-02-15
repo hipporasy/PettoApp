@@ -25,6 +25,12 @@
 		556D1BA82998800A0014D6AB /* PetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1BA02998800A0014D6AB /* PetDetailView.swift */; };
 		556D1BAB299880840014D6AB /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1BAA2998806E0014D6AB /* GifImageView.swift */; };
 		556D1BAD299886B50014D6AB /* Extension+Parcelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D1BAC299886B50014D6AB /* Extension+Parcelable.swift */; };
+		559452DB299CFF2500876C26 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559452DA299CFF2500876C26 /* Injector.swift */; };
+		559452DD299D014200876C26 /* Injector+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559452DC299D014200876C26 /* Injector+Injection.swift */; };
+		559452E0299D03D100876C26 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 559452DF299D03D100876C26 /* Swinject */; };
+		559452E2299D03F700876C26 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559452E1299D03F700876C26 /* Container.swift */; };
+		559452E4299D052300876C26 /* HomeView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559452E3299D052300876C26 /* HomeView+ViewModel.swift */; };
+		559452E6299D06C300876C26 /* NSArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559452E5299D06C300876C26 /* NSArray+Extension.swift */; };
 		55C607392998BC0A004346FD /* Enum+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C607382998BC0A004346FD /* Enum+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,11 @@
 		556D1BA02998800A0014D6AB /* PetDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailView.swift; sourceTree = "<group>"; };
 		556D1BAA2998806E0014D6AB /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
 		556D1BAC299886B50014D6AB /* Extension+Parcelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Parcelable.swift"; sourceTree = "<group>"; };
+		559452DA299CFF2500876C26 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		559452DC299D014200876C26 /* Injector+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Injector+Injection.swift"; sourceTree = "<group>"; };
+		559452E1299D03F700876C26 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		559452E3299D052300876C26 /* HomeView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+ViewModel.swift"; sourceTree = "<group>"; };
+		559452E5299D06C300876C26 /* NSArray+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Extension.swift"; sourceTree = "<group>"; };
 		55C607382998BC0A004346FD /* Enum+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+Extension.swift"; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* Petto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				556D1B6529987F540014D6AB /* Introspect in Frameworks */,
+				559452E0299D03D100876C26 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,7 @@
 				556D1B6729987F820014D6AB /* Image+Gif+Extension.swift */,
 				556D1BAC299886B50014D6AB /* Extension+Parcelable.swift */,
 				55C607382998BC0A004346FD /* Enum+Extension.swift */,
+				559452E5299D06C300876C26 /* NSArray+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				556D1B982998800A0014D6AB /* HomeView.swift */,
+				559452E3299D052300876C26 /* HomeView+ViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -191,6 +205,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		559452D9299CFF0B00876C26 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				559452DA299CFF2500876C26 /* Injector.swift */,
+				559452DC299D014200876C26 /* Injector+Injection.swift */,
+				559452E1299D03F700876C26 /* Container.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +235,7 @@
 		7555FF7D242A565900829871 /* Petto */ = {
 			isa = PBXGroup;
 			children = (
+				559452D9299CFF0B00876C26 /* DI */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
@@ -250,6 +275,7 @@
 			name = Petto;
 			packageProductDependencies = (
 				556D1B6429987F540014D6AB /* Introspect */,
+				559452DF299D03D100876C26 /* Swinject */,
 			);
 			productName = Petto;
 			productReference = 7555FF7B242A565900829871 /* Petto.app */;
@@ -281,6 +307,7 @@
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
 				556D1B6329987F540014D6AB /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				559452DE299D03D100876C26 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -331,13 +358,18 @@
 				556D1BA22998800A0014D6AB /* CentreDetailView.swift in Sources */,
 				556D1BA72998800A0014D6AB /* ProfileView.swift in Sources */,
 				556D1BA12998800A0014D6AB /* CentreView.swift in Sources */,
+				559452E4299D052300876C26 /* HomeView+ViewModel.swift in Sources */,
+				559452DD299D014200876C26 /* Injector+Injection.swift in Sources */,
+				559452E2299D03F700876C26 /* Container.swift in Sources */,
 				556D1BA82998800A0014D6AB /* PetDetailView.swift in Sources */,
 				556D1B6E29987FBF0014D6AB /* Pet.swift in Sources */,
 				556D1BAD299886B50014D6AB /* Extension+Parcelable.swift in Sources */,
 				556D1BA42998800A0014D6AB /* HomeView.swift in Sources */,
 				556D1BA52998800A0014D6AB /* SplashScreenView.swift in Sources */,
 				556D1B6929987F910014D6AB /* Image+Gif+Extension.swift in Sources */,
+				559452E6299D06C300876C26 /* NSArray+Extension.swift in Sources */,
 				556D1BA62998800A0014D6AB /* MasterView.swift in Sources */,
+				559452DB299CFF2500876C26 /* Injector.swift in Sources */,
 				556D1B9129987FFF0014D6AB /* AuthView.swift in Sources */,
 				556D1BA32998800A0014D6AB /* ContentView.swift in Sources */,
 				55C607392998BC0A004346FD /* Enum+Extension.swift in Sources */,
@@ -401,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -554,6 +586,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		559452DE299D03D100876C26 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -561,6 +601,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 556D1B6329987F540014D6AB /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		559452DF299D03D100876C26 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 559452DE299D03D100876C26 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
