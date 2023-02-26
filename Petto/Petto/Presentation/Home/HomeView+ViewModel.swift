@@ -44,29 +44,6 @@ extension HomeView {
 
             }
         }
-        
-//        func loadProduct() {
-//            state = .loading
-//            repository
-//                .fetchProducts()
-//                .receive(on: RunLoop.main)
-//                .sink(receiveCompletion: { status in
-//                    self.state = .fetched
-//                    switch status {
-//                    case .failure(let error):
-//                        print(error)
-////                        self.state = .error(.other(error))
-//                    case .finished:
-//                        print("Success")
-////                        self.state = .fetched
-//                    }
-//                },
-//                      receiveValue: { (result) in
-//                    self.products = result.products
-//                })
-//                .store(in: &cancellable)
-//        }
-        
     }
     
 }

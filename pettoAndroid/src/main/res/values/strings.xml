@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_1">Adopt a new friend</string>
+    <string name="splash_1_description">There\'s a saying. If you want someone to love you forever, adopt a new friend, feed it and keep it around.</string>
+    <string name="splash_2">Make new Friends</string>
+    <string name="splash_2_description">Here you can meet your dream friend and joy with them</string>
+    <string name="splash_3">Don\'t Shop! Adopt</string>
+    <string name="splash_3_description">Most adoptable pets come from loving homes that simply cannot care for them anymore.</string>
+    <string name="image">Image</string>
+</resources>

@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("dagger.hilt.android.plugin")
+    id("com.google.devtools.ksp")
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -38,6 +41,10 @@ android {
     }
 }
 
+android.applicationVariants.all {
+    addJavaSourceFoldersToModel(File(buildDir, "generated/ksp/${this.name}/kotlin"))
+}
+
 dependencies {
     implementation(project(":pettoCore"))
     implementation("androidx.compose.ui:ui:1.3.1")
@@ -46,4 +53,19 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.3.1")
     implementation("androidx.compose.material:material:1.3.1")
     implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("com.jakewharton.timber:timber:5.0.1")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.0")
+
+    // Dagger - Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+
+    // Compose dependencies
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("io.github.raamcosta.compose-destinations:core:1.8.33-beta")
+    implementation("io.github.raamcosta.compose-destinations:animations-core:1.8.33-beta")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.8.33-beta")
 }
