@@ -504,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Petto/Preview Content\"";
+				DEVELOPMENT_TEAM = 2TY7MRP429;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +520,7 @@
 					"-framework",
 					pettoCore,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.Petto;
+				PRODUCT_BUNDLE_IDENTIFIER = group.hanso.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -532,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Petto/Preview Content\"";
+				DEVELOPMENT_TEAM = 2TY7MRP429;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,7 +549,7 @@
 					"-framework",
 					pettoCore,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.Petto;
+				PRODUCT_BUNDLE_IDENTIFIER = group.hanso.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

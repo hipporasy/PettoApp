@@ -197,7 +197,7 @@ enum class OnBoardingType {
         override val descriptionRes: Int
             get() = R.string.splash_2_description
         override val imageRes: Int
-            get() = R.drawable.splash_1
+            get() = R.drawable.splash_2
     },
     THREE {
         override val titleRes: Int
