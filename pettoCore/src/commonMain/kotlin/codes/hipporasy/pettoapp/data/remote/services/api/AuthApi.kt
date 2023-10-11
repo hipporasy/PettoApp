@@ -25,17 +25,11 @@ internal sealed class AuthApi : Requestable {
         }
 
     override val headers: HashMap<String, String>
-        get() = when (this) {
-            else -> {
-                super.headers
-            }
-        }
+        get() = super.headers
 
     override val parameter: Map<String, Any>?
         get() = null
 
     override val body: Any?
-        get() = when (this) {
-            else -> null
-        }
+        get() = null
 }
